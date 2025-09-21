@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Para mi niña consentida</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#fff1da;
+      --bg2:#ffe2c7;
+      --card:#fffef9;
+      --accent:#ffd54d;
+      --muted:#5c3a00;
+      --shadow:0 16px 50px rgba(0,0,0,0.18);
+      --glow:0 0 12px rgba(255,215,90,0.6),0 0 20px rgba(255,215,120,0.4);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:Inter,system-ui,Arial,sans-serif;
+      background:radial-gradient(circle at top,var(--bg1),var(--bg2));
+      color:var(--muted);
+      padding:20px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:34px;
+      padding:48px 32px;
+      max-width:600px;
+      width:100%;
+      box-shadow:var(--shadow);
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    h1{
+      font-family:'Great Vibes',cursive;
+      font-size:52px;
+      margin-bottom:18px;
+      color:#6b3d00;
+    }
+    p.lead{
+      font-size:18px;
+      margin-bottom:24px;
+      color:#5b3b00;
+    }
+    .quote{
+      background:linear-gradient(90deg,rgba(255,213,79,0.25),rgba(255,244,180,0.15));
+      border-radius:18px;
+      padding:22px;
+      font-size:20px;
+      line-height:1.5;
+      border:1px solid rgba(255,210,70,0.25);
+      margin-bottom:28px;
+      font-style:italic;
+    }
+    .bouquet{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:24px;
+      margin-bottom:28px;
+    }
+    .bouquet svg{
+      width:120px;
+      height:auto;
+      transform:scale(0);
+      opacity:0;
+      animation:bloom 1.2s forwards;
+      filter:drop-shadow(var(--glow));
+    }
+    .bouquet svg:nth-child(2){animation-delay:0.3s}
+    .bouquet svg:nth-child(3){animation-delay:0.6s}
+    .bouquet svg:nth-child(4){animation-delay:0.9s}
+    .bouquet svg:nth-child(5){animation-delay:1.2s}
+    @keyframes bloom{
+      0%{transform:scale(0);opacity:0}
+      60%{transform:scale(1.15);opacity:1}
+      100%{transform:scale(1);opacity:1}
+    }
+    .sparkle{
+      position:absolute;
+      top:0;left:0;right:0;bottom:0;
+      pointer-events:none;
+      overflow:hidden;
+    }
+    .sparkle span{
+      position:absolute;
+      width:6px;height:6px;
+      background:gold;
+      border-radius:50%;
+      opacity:0.8;
+      animation: twinkle 3s infinite ease-in-out;
+    }
+    @keyframes twinkle{
+      0%,100%{transform:scale(0.5);opacity:0}
+      50%{transform:scale(1.2);opacity:1}
+    }
+    footer{
+      font-size:14px;
+      color:#8a5a00;
+      margin-top:18px;
+      font-weight:600;
+    }
+    @media(max-width:640px){
+      h1{font-size:42px}
+      .quote{font-size:18px;padding:18px}
+      .bouquet svg{width:95px}
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="sparkle">
+      <span style="top:20%;left:10%;animation-delay:0s"></span>
+      <span style="top:40%;left:80%;animation-delay:1s"></span>
+      <span style="top:70%;left:30%;animation-delay:2s"></span>
+      <span style="top:10%;left:60%;animation-delay:1.5s"></span>
+      <span style="top:85%;left:50%;animation-delay:2.5s"></span>
+    </div>
+    <h1>Para mi niña consentida</h1>
+    <p class="lead">Un ramo de flores amarillas para ti, con todo mi cariño.</p>
+
+    <div class="quote">
+      Eres una persona maravillosa y espero seguir conociéndote y poder amar cada parte de ti
+    </div>
+
+    <div class="bouquet" aria-hidden="true">
+      <!-- Flor 1 -->
+      <svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#2d5a2d" stroke-width="6" stroke-linecap="round">
+          <path d="M100 280 C95 200,105 160,100 120"/>
+        </g>
+        <circle cx="100" cy="100" r="36" fill="#ffd54d" stroke="#e6b800" stroke-width="3"/>
+        <circle cx="100" cy="100" r="14" fill="#f7c948"/>
+        <ellipse cx="100" cy="55" rx="24" ry="36" fill="#fff7b6" stroke="#e6b800"/>
+      </svg>
+      <!-- Flor 2 -->
+      <svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#2d5a2d" stroke-width="6" stroke-linecap="round">
+          <path d="M100 280 C100 200,95 160,100 120"/>
+        </g>
+        <circle cx="100" cy="100" r="34" fill="#ffd54d" stroke="#e6b800" stroke-width="3"/>
+        <circle cx="100" cy="100" r="12" fill="#f7c948"/>
+        <path d="M70 90 C100 60,130 60,150 90 C120 85,100 120,70 90 Z" fill="#fff7b6" stroke="#e6b800"/>
+      </svg>
+    </div>
+
+    <footer>Atentamente: Dei</footer>
+  </div>
+</body>
+</html>
